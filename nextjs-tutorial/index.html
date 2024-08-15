@@ -1,0 +1,51 @@
+<html>
+    <body>
+        <div id="app">
+            <script type="text/jsx">
+                const app = document.getElementById('app');
+                
+                function Header(props) {
+                    console.log(props);
+                    return (<h1>{props.title}</h1>)
+                }
+                
+                function Homepage() {
+                    return (
+                        <div>
+                            {/* Nesting the header component */}
+                            <Header title = "Am i finally understanding passing the props!"/>
+                            <h2> Did it nest ?  </h2>
+                        </div>
+                    )
+                }
+                
+                const root = ReactDOM.createRoot(app);
+                root.render(<Homepage />);
+            </script>
+        </div>
+    </body>
+    <footer>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>  
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>   
+        <!-- <script type="text/javascript">
+            //select the div with the id app
+            const app = document.getElementById("app");
+            
+            //create a new H1 element
+            const header = document.createElement('h1');
+
+            //create a new text node for the h1 element
+            const text = 'Develop. Preview. Ship.'
+            const headerContent = document.createTextNode(text)
+
+            //append the text to the header element
+            header.appendChild(headerContent)
+
+            //Place the h1 element in the div
+            app.appendChild(header)
+            console.log("Script appended H1 with content!")
+
+        </script> -->
+    </footer>
+</html>
